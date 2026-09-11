@@ -369,6 +369,121 @@
                     }
                 });
             }
+
+            // ==========================================
+            // TESTIMONIALS CAROUSEL
+            // ==========================================
+            const testimonialsData = [
+                {
+                    quote: '"Najam did an outstanding job on our platform. His attention to detail, backend architecture, and communication were exceptional. Highly recommended!"',
+                    author: 'Engineering Lead',
+                    company: 'AlgilityX Platform'
+                },
+                {
+                    quote: '"Delivered our healthcare platform with seamless video conferencing, automated certification, and AI chatbot integration on time with flawless execution. A pleasure to collaborate with."',
+                    author: 'Technical Director',
+                    company: 'ABHCC Healthcare Board'
+                },
+                {
+                    quote: '"Exceptional work on our payment gateway integrations (Stripe & Flutterwave) and real-time transaction workflows. Highly skilled in secure API development."',
+                    author: 'CTO & Co-Founder',
+                    company: 'Surion Wealth & FinTech'
+                },
+                {
+                    quote: '"Built a robust multi-branch clinic system with reliable inventory FIFO stock deduction, automated alerts, and role-based permissions from scratch."',
+                    author: 'Lead Technical Architect',
+                    company: 'Clinic ERP Management'
+                }
+            ];
+
+            let currentTestimonial = 0;
+            let testimonialInterval = null;
+
+            const testimonialQuote = document.getElementById('testimonial-quote');
+            const testimonialAuthor = document.getElementById('testimonial-author');
+            const testimonialCompany = document.getElementById('testimonial-company');
+            const testimonialBox = document.getElementById('testimonial-content-box');
+            const testimonialDots = document.querySelectorAll('.testimonial-dot');
+            const prevTestimonialBtn = document.getElementById('testimonial-prev-btn');
+            const nextTestimonialBtn = document.getElementById('testimonial-next-btn');
+            const testimonialCardWrapper = document.getElementById('testimonial-card-wrapper');
+
+            function showTestimonial(index) {
+                if (!testimonialQuote || !testimonialBox) return;
+
+                // Animate out
+                testimonialBox.classList.add('opacity-0', '-translate-y-1');
+
+                setTimeout(() => {
+                    currentTestimonial = (index + testimonialsData.length) % testimonialsData.length;
+                    const data = testimonialsData[currentTestimonial];
+
+                    testimonialQuote.textContent = data.quote;
+                    testimonialAuthor.textContent = data.author;
+                    testimonialCompany.textContent = data.company;
+
+                    // Update dots
+                    testimonialDots.forEach((dot, idx) => {
+                        if (idx === currentTestimonial) {
+                            dot.classList.remove('bg-slate-700', 'hover:bg-slate-500');
+                            dot.classList.add('bg-white');
+                        } else {
+                            dot.classList.remove('bg-white');
+                            dot.classList.add('bg-slate-700', 'hover:bg-slate-500');
+                        }
+                    });
+
+                    // Animate in
+                    testimonialBox.classList.remove('opacity-0', '-translate-y-1');
+                    testimonialBox.classList.add('opacity-100', 'translate-y-0');
+                }, 180);
+            }
+
+            function startTestimonialAutoplay() {
+                stopTestimonialAutoplay();
+                testimonialInterval = setInterval(() => {
+                    showTestimonial(currentTestimonial + 1);
+                }, 5500);
+            }
+
+            function stopTestimonialAutoplay() {
+                if (testimonialInterval) {
+                    clearInterval(testimonialInterval);
+                    testimonialInterval = null;
+                }
+            }
+
+            if (prevTestimonialBtn) {
+                prevTestimonialBtn.addEventListener('click', () => {
+                    showTestimonial(currentTestimonial - 1);
+                    startTestimonialAutoplay();
+                });
+            }
+
+            if (nextTestimonialBtn) {
+                nextTestimonialBtn.addEventListener('click', () => {
+                    showTestimonial(currentTestimonial + 1);
+                    startTestimonialAutoplay();
+                });
+            }
+
+            testimonialDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    showTestimonial(idx);
+                    startTestimonialAutoplay();
+                });
+            });
+
+            if (testimonialCardWrapper) {
+                testimonialCardWrapper.addEventListener('mouseenter', stopTestimonialAutoplay);
+                testimonialCardWrapper.addEventListener('mouseleave', startTestimonialAutoplay);
+            }
+
+            // Start Autoplay on load
+            if (testimonialQuote) {
+                startTestimonialAutoplay();
+            }
         });
     </script>
 </body>

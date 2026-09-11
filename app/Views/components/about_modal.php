@@ -47,7 +47,7 @@
                     I am a dedicated Web Developer with a strong foundation in building modern, high-performance web applications, scalable ERP systems, and responsive digital products. With extensive experience across both frontend engineering and backend architecture, I specialize in transforming complex business workflows into clean, intuitive, and efficient solutions.
                 </p>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    My project history covers enterprise healthcare management (MERN ERP), fintech platforms (Surion with Stripe/Flutterwave), corporate SaaS architectures (AlgilityX), and e-learning systems (ABHCC with live BigBlueButton &amp; AI chat integration).
+                    My project history covers enterprise healthcare management (MERN ERP), fintech platforms (Surion with Stripe/Flutterwave), corporate SaaS architectures (AlgilityX), and healthcare counselor platforms (ABHCC with live BigBlueButton &amp; AI chat integration).
                 </p>
             </div>
 

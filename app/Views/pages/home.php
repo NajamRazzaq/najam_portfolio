@@ -815,49 +815,81 @@
 </section>
 
 <!-- TESTIMONIALS SECTION (DARK SLATE BOX) -->
-<section class="py-12">
+<section class="py-12" id="testimonials">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-3xl bg-brand-950 text-white p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
+        <div id="testimonial-card-wrapper" class="rounded-3xl bg-brand-950 text-white p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden transition-all">
             
             <!-- Subtle Radial Glow Background -->
             <div class="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 
                 <!-- Left Column -->
-                <div class="lg:col-span-5 space-y-2">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">CLIENTS & COLLEAGUES</span>
+                <div class="lg:col-span-5 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-slate-300 text-[10px] font-bold uppercase tracking-widest">
+                        <span>⭐</span>
+                        <span>CLIENTS &amp; COLLEAGUES</span>
+                    </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
-                        Trusted by Businesses and Teams Worldwide
+                        Trusted by Businesses &amp; Teams Worldwide
                     </h2>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        What project managers, technical leads, and founders say about working with me.
+                    </p>
                 </div>
 
-                <!-- Right Quote Column -->
+                <!-- Right Dynamic Quote Column -->
                 <div class="lg:col-span-7 space-y-6">
-                    <blockquote class="text-sm sm:text-base text-slate-300 font-normal leading-relaxed italic">
-                        "Najam did an excellent job on our platform. His attention to detail, problem-solving skills and communication were outstanding. Highly recommended!"
-                    </blockquote>
                     
-                    <div class="flex items-center justify-between pt-2 border-t border-slate-800">
-                        <span class="text-xs text-slate-400 font-medium">— Project Manager, AlgilityX</span>
+                    <!-- Stars & Quote Box -->
+                    <div id="testimonial-content-box" class="space-y-4 min-h-[140px] flex flex-col justify-center transition-all duration-300 opacity-100 transform translate-y-0">
+                        
+                        <!-- 5 Star Rating Icons -->
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+
+                        <!-- Quote -->
+                        <blockquote id="testimonial-quote" class="text-sm sm:text-base text-slate-200 font-normal leading-relaxed italic">
+                            "Najam did an outstanding job on our platform. His attention to detail, backend architecture, and communication were exceptional. Highly recommended!"
+                        </blockquote>
+                    </div>
+                    
+                    <!-- Bottom Bar (Author & Nav) -->
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800/90">
+                        <div id="testimonial-author-box" class="flex items-center gap-2">
+                            <span id="testimonial-author" class="text-xs sm:text-sm font-bold text-white">Engineering Lead</span>
+                            <span class="text-slate-600">&bull;</span>
+                            <span id="testimonial-company" class="text-xs text-slate-400 font-medium">AlgilityX</span>
+                        </div>
                         
                         <!-- Navigation controls -->
-                        <div class="flex items-center gap-3">
-                            <div class="flex items-center gap-1">
-                                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
-                                <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
-                                <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
+                        <div class="flex items-center gap-4">
+                            <!-- Indicator Dots -->
+                            <div id="testimonial-dots" class="flex items-center gap-1.5">
+                                <button type="button" data-index="0" class="testimonial-dot w-2 h-2 rounded-full bg-white transition-all cursor-pointer" aria-label="Slide 1"></button>
+                                <button type="button" data-index="1" class="testimonial-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer" aria-label="Slide 2"></button>
+                                <button type="button" data-index="2" class="testimonial-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer" aria-label="Slide 3"></button>
+                                <button type="button" data-index="3" class="testimonial-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all cursor-pointer" aria-label="Slide 4"></button>
                             </div>
+
+                            <!-- Prev & Next Buttons -->
                             <div class="flex items-center gap-1.5">
-                                <button type="button" class="w-6 h-6 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-colors" aria-label="Previous">
-                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                                <button type="button" id="testimonial-prev-btn" class="w-8 h-8 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400 hover:bg-slate-800 transition-all cursor-pointer active:scale-90" aria-label="Previous testimonial">
+                                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
                                 </button>
-                                <button type="button" class="w-6 h-6 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-colors" aria-label="Next">
-                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                                <button type="button" id="testimonial-next-btn" class="w-8 h-8 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400 hover:bg-slate-800 transition-all cursor-pointer active:scale-90" aria-label="Next testimonial">
+                                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
                                 </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
