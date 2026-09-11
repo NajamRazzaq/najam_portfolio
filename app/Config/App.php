@@ -18,6 +18,17 @@ class App extends BaseConfig
      */
     public string $baseURL = 'http://localhost:8080/';
 
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Support Vercel POSIX environment variable names (underscores)
+        $envBase = env('app_baseURL') ?? env('app.baseURL') ?? env('APP_BASEURL');
+        if (!empty($envBase)) {
+            $this->baseURL = rtrim($envBase, '/') . '/';
+        }
+    }
+
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.

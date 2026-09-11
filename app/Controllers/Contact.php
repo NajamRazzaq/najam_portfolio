@@ -39,16 +39,23 @@ class Contact extends BaseController
             ])->setStatusCode(400);
         }
 
-        // Email Configuration (using .env or fallback values)
-        $smtpPass = str_replace(' ', '', env('email.SMTPPass', 'jhjpqfysaqlgpogu'));
+        // Email Configuration (purely read from environment variables)
+        $rawPass = env('email_SMTPPass') ?? env('email.SMTPPass') ?? '';
+        $smtpPass = str_replace(' ', '', (string) $rawPass);
+
+        $smtpUser = env('email_SMTPUser') ?? env('email.SMTPUser') ?? '';
+        $smtpHost = env('email_SMTPHost') ?? env('email.SMTPHost') ?? 'smtp.gmail.com';
+        $smtpPort = (int) (env('email_SMTPPort') ?? env('email.SMTPPort') ?? 587);
+        $smtpCrypto = env('email_SMTPCrypto') ?? env('email.SMTPCrypto') ?? 'tls';
+        $protocol = env('email_protocol') ?? env('email.protocol') ?? 'smtp';
 
         $config = [
-            'protocol'      => env('email.protocol', 'smtp'),
-            'SMTPHost'      => env('email.SMTPHost', 'smtp.gmail.com'),
-            'SMTPUser'      => env('email.SMTPUser', 'najamrazzaq7861@gmail.com'),
+            'protocol'      => $protocol,
+            'SMTPHost'      => $smtpHost,
+            'SMTPUser'      => $smtpUser,
             'SMTPPass'      => $smtpPass,
-            'SMTPPort'      => (int) env('email.SMTPPort', 587),
-            'SMTPCrypto'    => env('email.SMTPCrypto', 'tls'),
+            'SMTPPort'      => $smtpPort,
+            'SMTPCrypto'    => $smtpCrypto,
             'mailType'      => 'html',
             'charset'       => 'UTF-8',
             'newline'       => "\r\n",
@@ -60,7 +67,7 @@ class Contact extends BaseController
         $emailService = \Config\Services::email();
         $emailService->initialize($config);
 
-        $recipientEmail = env('email.SMTPUser', 'najamrazzaq7861@gmail.com');
+        $recipientEmail = !empty($smtpUser) ? $smtpUser : 'najamrazzaq7861@gmail.com';
 
         $emailService->setFrom($recipientEmail, 'Portfolio Contact: ' . $name);
         $emailService->setTo($recipientEmail);
