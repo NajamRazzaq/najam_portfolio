@@ -291,16 +291,39 @@
             const errorMsg = document.getElementById('contact-error-msg');
 
             // Service Pill Toggles
-            servicePills.forEach(pill => {
-                pill.addEventListener('click', () => {
-                    servicePills.forEach(p => {
+            function selectServicePill(serviceName) {
+                let matched = false;
+                servicePills.forEach(p => {
+                    if (p.getAttribute('data-service') === serviceName) {
+                        p.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+                        p.classList.add('bg-brand-950', 'text-white', 'border-brand-950', 'shadow-xs', 'active');
+                        matched = true;
+                    } else {
                         p.classList.remove('bg-brand-950', 'text-white', 'border-brand-950', 'shadow-xs', 'active');
                         p.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
-                    });
-                    pill.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
-                    pill.classList.add('bg-brand-950', 'text-white', 'border-brand-950', 'shadow-xs', 'active');
-                    if (serviceInput) {
-                        serviceInput.value = pill.getAttribute('data-service');
+                    }
+                });
+                if (serviceInput && matched) {
+                    serviceInput.value = serviceName;
+                }
+            }
+
+            servicePills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    selectServicePill(pill.getAttribute('data-service'));
+                });
+            });
+
+            // Service CTA triggers (e.g. from Services section pillar cards)
+            document.querySelectorAll('[data-service-trigger]').forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    const requestedService = trigger.getAttribute('data-service-trigger');
+                    if (requestedService) {
+                        selectServicePill(requestedService);
+                        setTimeout(() => {
+                            const nameInput = document.getElementById('contact-name');
+                            if (nameInput) nameInput.focus();
+                        }, 600);
                     }
                 });
             });

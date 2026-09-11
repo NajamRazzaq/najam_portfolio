@@ -356,146 +356,287 @@
 
 <!-- SERVICES SECTION (SOFT SLATE BACKGROUND) -->
 <section id="services" class="py-20 bg-slate-50/70 border-b border-slate-200/70 relative overflow-hidden">
-    <!-- Subtle Ambient Glow -->
-    <div class="absolute -left-20 top-20 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Subtle Ambient Glows -->
+    <div class="absolute -left-20 top-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute right-0 bottom-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200/80 text-brand-900 text-xs font-semibold mb-3 shadow-2xs">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    <span>WHAT I BUILD &amp; DELIVER</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 tracking-tight leading-tight">
+                    Engineering Solutions Built for Scale
+                </h2>
+            </div>
+            <p class="text-slate-600 text-sm max-w-md">
+                From high-conversion SaaS applications to custom healthcare ERPs and automated payment ecosystems, I build reliable, production-grade solutions.
+            </p>
+        </div>
+
+        <!-- 3 High-Impact Engineering Pillar Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
             
-            <!-- Left Info Column -->
-            <div class="lg:col-span-4 space-y-6">
+            <!-- Pillar 1: Full-Stack SaaS & Web Applications -->
+            <div class="group relative rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-8 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+                <!-- Ambient Top Accent Gradient -->
+                <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-3xl"></div>
+
                 <div>
-                    <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400">WHAT I BUILD</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 tracking-tight mt-1 leading-tight">
-                        Technology That Solves Real Business Problems
-                    </h2>
-                    <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
-                        I help businesses, startups and organizations build modern web solutions that are fast, secure and scalable.
+                    <!-- Top Icon & Tag -->
+                    <div class="flex items-center justify-between gap-3 mb-6 pt-1">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-cyan-600 shadow-2xs group-hover:scale-105 group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-wide uppercase px-2.5 py-1 rounded-full bg-cyan-50 text-cyan-700 border border-cyan-200/60">
+                            SaaS &amp; Web Apps
+                        </span>
+                    </div>
+
+                    <!-- Title & Tagline -->
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight mb-2">
+                        Full-Stack SaaS &amp; Web Platforms
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                        End-to-end web products engineered with modern React frontends, high-performance Node/PHP backends, and clean database structures.
                     </p>
+
+                    <!-- Deliverables Checklist -->
+                    <div class="space-y-3 mb-6 pt-5 border-t border-slate-100">
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Modern React.js &amp; Component-Driven UI Architecture</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Scalable Backends with Node.js, Express &amp; CodeIgniter 4</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Secure JWT Authentication, Session Guards &amp; RBAC</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Interactive Dashboards, Analytics &amp; Data Visualizations</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Mobile-First Responsive Layouts &amp; Core Web Vitals Polish</span>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack Tags -->
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">React.js</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Node.js</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">CodeIgniter 4</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Tailwind CSS</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">MongoDB</span>
+                    </div>
                 </div>
 
-                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-950 text-white text-xs font-semibold hover:bg-brand-800 transition-all shadow-sm">
-                    <span>Explore All Services</span>
-                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                    </svg>
-                </a>
+                <!-- Interactive CTA Button -->
+                <div class="mt-6 pt-4 border-t border-slate-100">
+                    <a href="#contact" data-service-trigger="Full-Stack Web App" class="service-trigger-btn flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-black font-semibold text-xs transition-all shadow-2xs group cursor-pointer">
+                        <span>Inquire About Web Apps</span>
+                        <span class="group-hover:translate-x-1 transition-transform font-bold">→</span>
+                    </a>
+                </div>
             </div>
 
-            <!-- Right 2x3 Grid of 6 Service Cards -->
-            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <!-- Service 1 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
+            <!-- Pillar 2: Healthcare & Enterprise ERP Solutions -->
+            <div class="group relative rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-8 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+                <!-- Ambient Top Accent Gradient -->
+                <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-t-3xl"></div>
+
+                <div>
+                    <!-- Top Icon & Tag -->
+                    <div class="flex items-center justify-between gap-3 mb-6 pt-1">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shadow-2xs group-hover:scale-105 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 7V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M9 17v-4"/><path d="M12 17v-2"/><path d="M15 17v-6"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-wide uppercase px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                            Healthcare &amp; ERPs
+                        </span>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">Web Development</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Modern, responsive websites for businesses and organizations.</p>
+
+                    <!-- Title & Tagline -->
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight mb-2">
+                        Healthcare &amp; Enterprise ERP Systems
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                        Mission-critical platforms built for multi-branch clinics, healthcare boards, and businesses requiring granular role management and real-time operations.
+                    </p>
+
+                    <!-- Deliverables Checklist -->
+                    <div class="space-y-3 mb-6 pt-5 border-t border-slate-100">
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Multi-Branch Clinical Operations &amp; Staff Scheduling</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>FIFO Inventory Stock Tracking &amp; Low-Stock Alerts</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Granular Role-Based Permissions (Admins, Doctors, Staff)</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Automated PDF Invoicing, Medical Records &amp; Excel Exports</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Strict Data Integrity, Relational Schemas &amp; Audit Logs</span>
+                        </div>
                     </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
+
+                    <!-- Tech Stack Tags -->
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">CodeIgniter 4</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">PHP 8+</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">MySQL</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">MERN Stack</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Bootstrap 5</span>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                        </svg>
+                <!-- Interactive CTA Button -->
+                <div class="mt-6 pt-4 border-t border-slate-100">
+                    <a href="#contact" data-service-trigger="Custom ERP / Dashboard" class="service-trigger-btn flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-black font-semibold text-xs transition-all shadow-2xs group cursor-pointer">
+                        <span>Inquire About ERPs</span>
+                        <span class="group-hover:translate-x-1 transition-transform font-bold">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pillar 3: FinTech, Live Video & AI Systems -->
+            <div class="group relative rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-8 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between shadow-xs">
+                <!-- Ambient Top Accent Gradient -->
+                <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-t-3xl"></div>
+
+                <div>
+                    <!-- Top Icon & Tag -->
+                    <div class="flex items-center justify-between gap-3 mb-6 pt-1">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shadow-2xs group-hover:scale-105 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-wide uppercase px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                            APIs, FinTech &amp; AI
+                        </span>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">Web Applications</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Custom applications tailored to your business needs.</p>
+
+                    <!-- Title & Tagline -->
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight mb-2">
+                        FinTech, Live Video &amp; AI Integrations
+                    </h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                        Connecting international payment checkouts, live video classroom sessions, conversational AI voice bots, and automated webhook pipelines.
+                    </p>
+
+                    <!-- Deliverables Checklist -->
+                    <div class="space-y-3 mb-6 pt-5 border-t border-slate-100">
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Stripe &amp; Flutterwave Global Gateways &amp; Webhooks</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>BigBlueButton Live Video Conferencing Integration</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Vapi AI Voice Agents &amp; Conversational Workflow Bots</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Custom RESTful Endpoints with Swagger / Postman QA</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                            <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">✓</span>
+                            <span>Automated Notifications &amp; Background Email/SMS Queues</span>
+                        </div>
                     </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
+
+                    <!-- Tech Stack Tags -->
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Stripe</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Flutterwave</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">BigBlueButton</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Vapi AI</span>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-semibold border border-slate-200/60">Postman</span>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">Frontend Development</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Modern, performant interfaces with React.js & Tailwind.</p>
-                    </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </div>
+                <!-- Interactive CTA Button -->
+                <div class="mt-6 pt-4 border-t border-slate-100">
+                    <a href="#contact" data-service-trigger="API & Database" class="service-trigger-btn flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-black font-semibold text-xs transition-all shadow-2xs group cursor-pointer">
+                        <span>Inquire About Integrations</span>
+                        <span class="group-hover:translate-x-1 transition-transform font-bold">→</span>
+                    </a>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">Backend & APIs</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Secure and scalable APIs using Node.js, Express.js and CI4.</p>
-                    </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 7V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M9 17v-4"/><path d="M12 17v-2"/><path d="M15 17v-6"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">CRM / ERP Systems</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Business management platforms, dashboards and role-based systems.</p>
-                    </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card bg-white rounded-2xl border border-slate-200/80 p-5 space-y-3 relative group shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all">
-                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-brand-950 group-hover:text-white transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm text-brand-950">AI-Powered Features</h4>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">AI chatbots and intelligent features integrated into your platform.</p>
-                    </div>
-                    <div class="pt-2 flex justify-end">
-                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-
             </div>
 
         </div>
+
+        <!-- Client Assurance & Guarantees Strip -->
+        <div class="rounded-2xl bg-white border border-slate-200/90 p-6 shadow-2xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold flex-shrink-0 text-base">
+                        ⚡
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-950">Fast 24-48h Discovery</div>
+                        <div class="text-[11px] text-slate-500 mt-0.5">Quick scope &amp; architecture roadmap</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 font-bold flex-shrink-0 text-base">
+                        🛡️
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-950">100% Clean Code</div>
+                        <div class="text-[11px] text-slate-500 mt-0.5">Modular, documented Git repository</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-600 font-bold flex-shrink-0 text-base">
+                        💬
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-950">Direct Developer Access</div>
+                        <div class="text-[11px] text-slate-500 mt-0.5">Direct updates via Slack/WhatsApp</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 font-bold flex-shrink-0 text-base">
+                        🚀
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-950">30-Day Free Support</div>
+                        <div class="text-[11px] text-slate-500 mt-0.5">Post-launch bug fixing &amp; warranty</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
