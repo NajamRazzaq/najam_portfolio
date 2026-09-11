@@ -5,7 +5,7 @@
 <!-- HERO SECTION -->
 <section id="home" class="relative pt-8 pb-12 lg:pt-14 lg:pb-16 overflow-hidden min-h-[560px] lg:min-h-[620px] flex items-center">
     <!-- Wide Hero Background Image (Desktop) -->
-    <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[58%] xl:w-[54%] h-full pointer-events-none z-0">
+    <div class="hidden md:block absolute right-0 top-0 bottom-0 w-[58%] xl:w-[54%] h-full pointer-events-none z-0">
         <img src="<?= base_url('assets/images/hero-najam-wide.jpg') ?>" 
              alt="Najam Razzaq - Web Developer & Designer" 
              class="w-full h-full object-cover object-right">
@@ -14,11 +14,11 @@
     </div>
 
     <!-- Handwriting Callout Badge (Top Right) -->
-    <div class="hidden lg:block absolute top-6 right-8 xl:right-16 z-20 text-right pointer-events-none select-none">
+    <!-- <div class="hidden md:block absolute top-6 right-8 xl:right-16 z-20 text-right pointer-events-none select-none">
         <p class="font-script text-2xl xl:text-3xl font-medium text-slate-700 tracking-wide rotate-[-3deg] leading-tight">
             Clean Code<br>Better Systems<br><span class="font-bold underline decoration-slate-400">Real Impact</span>
         </p>
-    </div>
+    </div> -->
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -111,7 +111,7 @@
             </div>
 
             <!-- Mobile Portrait Image (Visible on mobile/tablet) -->
-            <div class="lg:hidden mt-6 relative">
+            <div class="md:hidden mt-6 relative">
                 <div class="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-lg border border-slate-200/80">
                     <img src="<?= base_url('assets/images/hero-najam-wide.jpg') ?>" 
                          alt="Najam Razzaq - Web Developer & Designer" 
@@ -223,7 +223,7 @@
                     <h3 class="text-xl font-bold text-brand-950 tracking-tight">ABHCC</h3>
                     <p class="text-xs font-medium text-slate-500 mt-0.5 mb-3">Healthcare Management System</p>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        A comprehensive healthcare platform with payment integration (Stripe & Flutterwave), AI chatbot, and operational management features.
+                        A healthcare platform featuring international payment integration, AI-powered support and operational management workflows.
                     </p>
                 </div>
                 <!-- Tech Tags & Action -->
@@ -356,7 +356,7 @@
                 <div>
                     <span class="text-[11px] font-bold uppercase tracking-widest text-slate-400">WHAT I BUILD</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 tracking-tight mt-1 leading-tight">
-                        Services for Your Digital Growth
+                        Technology That Solves Real Business Problems
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
                         I help businesses, startups and organizations build modern web solutions that are fast, secure and scalable.
@@ -878,7 +878,7 @@
                         Have something worth building?
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-lg">
-                        Let's turn your idea, business problem, or product requirement into a thoughtful digital solution.
+                       Have a website, web application, business platform, or product idea in mind? Let's discuss what you're trying to build.
                     </p>
                 </div>
 
