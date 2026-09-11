@@ -209,7 +209,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             
             <!-- Project 1: ABHCC -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm">
+            <div data-open-project="abhcc" class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm cursor-pointer group">
                 <div>
                     <!-- Badge -->
                     <span class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-600 text-[11px] font-semibold mb-4">
@@ -217,10 +217,10 @@
                     </span>
                     <!-- Image Preview Mockup -->
                     <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-100 mb-6">
-                        <img src="<?= base_url('assets/images/abhcc-mockup.jpg') ?>" alt="ABHCC Healthcare Management System" class="w-full h-auto object-cover">
+                        <img src="<?= base_url('assets/images/abhcc-mockup.jpg') ?>" alt="ABHCC Healthcare Management System" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     </div>
                     <!-- Title & Subtitle -->
-                    <h3 class="text-xl font-bold text-brand-950 tracking-tight">ABHCC</h3>
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight group-hover:text-black transition-colors">ABHCC</h3>
                     <p class="text-xs font-medium text-slate-500 mt-0.5 mb-3">Healthcare Management System</p>
                     <p class="text-xs text-slate-600 leading-relaxed">
                         A healthcare platform featuring international payment integration, AI-powered support and operational management workflows.
@@ -235,16 +235,16 @@
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Stripe</span>
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Flutterwave</span>
                     </div>
-                    <a href="#work" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:text-black hover:bg-slate-100 transition-colors flex-shrink-0" aria-label="View Project">
-                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" data-open-project="abhcc" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 group-hover:text-black group-hover:bg-slate-100 group-hover:border-slate-300 transition-all flex-shrink-0" aria-label="View Project Details">
+                        <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
 
             <!-- Project 2: Surion -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm">
+            <div data-open-project="surion" class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm cursor-pointer group">
                 <div>
                     <!-- Badge -->
                     <span class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-600 text-[11px] font-semibold mb-4">
@@ -252,10 +252,10 @@
                     </span>
                     <!-- Image Preview Mockup -->
                     <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-100 mb-6">
-                        <img src="<?= base_url('assets/images/surion-mockup.jpg') ?>" alt="Surion Financial Group CRM" class="w-full h-auto object-cover">
+                        <img src="<?= base_url('assets/images/surion-mockup.jpg') ?>" alt="Surion Financial Group CRM" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     </div>
                     <!-- Title & Subtitle -->
-                    <h3 class="text-xl font-bold text-brand-950 tracking-tight">Surion</h3>
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight group-hover:text-black transition-colors">Surion</h3>
                     <p class="text-xs font-medium text-slate-500 mt-0.5 mb-3">Financial Group CRM</p>
                     <p class="text-xs text-slate-600 leading-relaxed">
                         Enterprise fintech platform with client management, virtual consultations and secure data handling.
@@ -268,16 +268,16 @@
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">MySQL</span>
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Tailwind CSS</span>
                     </div>
-                    <a href="#work" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:text-black hover:bg-slate-100 transition-colors flex-shrink-0" aria-label="View Project">
-                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" data-open-project="surion" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 group-hover:text-black group-hover:bg-slate-100 group-hover:border-slate-300 transition-all flex-shrink-0" aria-label="View Project Details">
+                        <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
 
             <!-- Project 3: AlgilityX -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm">
+            <div data-open-project="algilityx" class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm cursor-pointer group">
                 <div>
                     <!-- Badge -->
                     <span class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-600 text-[11px] font-semibold mb-4">
@@ -285,10 +285,10 @@
                     </span>
                     <!-- Image Preview Mockup -->
                     <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-100 mb-6">
-                        <img src="<?= base_url('assets/images/algilityx-mockup.jpg') ?>" alt="AlgilityX Corporate Platform" class="w-full h-auto object-cover">
+                        <img src="<?= base_url('assets/images/algilityx-mockup.jpg') ?>" alt="AlgilityX Corporate Platform" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     </div>
                     <!-- Title & Subtitle -->
-                    <h3 class="text-xl font-bold text-brand-950 tracking-tight">AlgilityX</h3>
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight group-hover:text-black transition-colors">AlgilityX</h3>
                     <p class="text-xs font-medium text-slate-500 mt-0.5 mb-3">Corporate Platform</p>
                     <p class="text-xs text-slate-600 leading-relaxed">
                         Modern corporate platform with responsive UI, admin dashboard and REST API integration.
@@ -301,16 +301,16 @@
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Node.js</span>
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Express.js</span>
                     </div>
-                    <a href="#work" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:text-black hover:bg-slate-100 transition-colors flex-shrink-0" aria-label="View Project">
-                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" data-open-project="algilityx" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 group-hover:text-black group-hover:bg-slate-100 group-hover:border-slate-300 transition-all flex-shrink-0" aria-label="View Project Details">
+                        <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
 
             <!-- Project 4: Clinic ERP -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm">
+            <div data-open-project="clinic-erp" class="project-card bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-7 space-y-6 flex flex-col justify-between shadow-sm cursor-pointer group">
                 <div>
                     <!-- Badge -->
                     <span class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-600 text-[11px] font-semibold mb-4">
@@ -318,10 +318,10 @@
                     </span>
                     <!-- Image Preview Mockup -->
                     <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-100 mb-6">
-                        <img src="<?= base_url('assets/images/clinic-erp-mockup.jpg') ?>" alt="Clinic ERP Multi-Branch Management" class="w-full h-auto object-cover">
+                        <img src="<?= base_url('assets/images/clinic-erp-mockup.jpg') ?>" alt="Clinic ERP Multi-Branch Management" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
                     </div>
                     <!-- Title & Subtitle -->
-                    <h3 class="text-xl font-bold text-brand-950 tracking-tight">Clinic ERP</h3>
+                    <h3 class="text-xl font-bold text-brand-950 tracking-tight group-hover:text-black transition-colors">Clinic ERP</h3>
                     <p class="text-xs font-medium text-slate-500 mt-0.5 mb-3">Multi-Branch Management System</p>
                     <p class="text-xs text-slate-600 leading-relaxed">
                         Complex ERP solution with inventory, appointments, role-based dashboards and clinical workflows.
@@ -334,11 +334,11 @@
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Tailwind CSS</span>
                         <span class="px-2.5 py-1 rounded-md bg-slate-100 text-[10px] font-medium text-slate-600">Chart.js</span>
                     </div>
-                    <a href="#work" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:text-black hover:bg-slate-100 transition-colors flex-shrink-0" aria-label="View Project">
-                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" data-open-project="clinic-erp" class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 group-hover:text-black group-hover:bg-slate-100 group-hover:border-slate-300 transition-all flex-shrink-0" aria-label="View Project Details">
+                        <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -905,16 +905,16 @@
                             <span class="truncate">najamrazzaq7861@gmail.com</span>
                         </a>
 
-                        <a href="tel:+923314712723" class="flex items-center gap-2.5 hover:text-black transition-colors group">
+                        <a href="tel:+923278737313" class="flex items-center gap-2.5 hover:text-black transition-colors group">
                             <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-200 transition-colors">
                                 <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
                             </div>
-                            <span>+92 331 4712723</span>
+                            <span>+92 327 8737313</span>
                         </a>
 
-                        <a href="https://linkedin.com/in/najam-razzaq-baaf43129" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-[#0A66C2] transition-colors group">
+                        <a href="https://www.linkedin.com/in/najam-razzaq-1bb453339/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-[#0A66C2] transition-colors group">
                             <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-blue-50 group-hover:text-[#0A66C2] transition-colors">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.5a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/>

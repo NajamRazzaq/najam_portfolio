@@ -61,9 +61,13 @@
     <!-- Footer -->
     <?= view('components/footer') ?>
 
-    <!-- Mobile Menu Script & Interactive Handlers -->
+    <!-- Project Details Modal -->
+    <?= view('components/project_modal') ?>
+
+    <!-- Interactive Handlers (Mobile Menu & Project Modal) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             
@@ -72,6 +76,154 @@
                     mobileMenu.classList.toggle('hidden');
                 });
             }
+
+            // Project Data (Direct from CV)
+            const projectsData = {
+                'abhcc': {
+                    title: 'ABHCC Healthcare Management System',
+                    category: 'Healthcare Platform',
+                    image: '<?= base_url('assets/images/abhcc-mockup.jpg') ?>',
+                    description: 'A comprehensive healthcare platform featuring international multi-currency payment integration, custom AI chatbot, and healthcare operational workflows across all 50 states.',
+                    liveUrl: 'https://abhcc.org/',
+                    techStack: ['CodeIgniter 4', 'MySQL', 'Bootstrap 5', 'Stripe', 'Flutterwave', 'REST APIs', 'AI Chatbot'],
+                    highlights: [
+                        'Payment Integration: Successfully integrated Stripe and Flutterwave payment gateways supporting secure international multi-currency transactions.',
+                        'Feature Innovation: Engineered and deployed a custom AI chatbot to automate user queries, improving live platform engagement and customer support efficiency.',
+                        'System Optimization: Overhauled legacy features, refactored core CodeIgniter 4 architecture, and optimized MySQL database queries to enhance system performance.'
+                    ]
+                },
+                'surion': {
+                    title: 'Surion Financial Group CRM',
+                    category: 'Enterprise Fintech',
+                    image: '<?= base_url('assets/images/surion-mockup.jpg') ?>',
+                    description: 'Enterprise fintech platform with client portfolio management, secure virtual consultations, and high-performance financial data handling.',
+                    liveUrl: 'https://surionfinancialgroup.com/',
+                    techStack: ['CodeIgniter 4', 'MySQL', 'Tailwind CSS', 'BigBlueButton', 'Bootstrap 5', 'REST APIs'],
+                    highlights: [
+                        'Platform Development: Built an enterprise fintech CRM platform from scratch with seamless cross-device responsiveness.',
+                        'UI Styling: Styled with Tailwind CSS for a fast-loading, clean, high-performance financial layout.',
+                        'Video Integration: Implemented secure virtual consultations via BigBlueButton open-source video conferencing.',
+                        'Database Design: Designed and indexed the full relational MySQL architecture for complex financial workflows.'
+                    ]
+                },
+                'algilityx': {
+                    title: 'AlgilityX Corporate Platform',
+                    category: 'Corporate Platform',
+                    image: '<?= base_url('assets/images/algilityx-mockup.jpg') ?>',
+                    description: 'Modern corporate technology platform with highly responsive UI, administrative dashboard, and robust RESTful API integration.',
+                    liveUrl: 'https://aigilityx.com/en/',
+                    techStack: ['React.js', 'Node.js', 'Express.js', 'REST APIs', 'Tailwind CSS', 'Lovable'],
+                    highlights: [
+                        'Frontend Development: Built modular, reusable, and performant React.js components and modern corporate UI layouts.',
+                        'Admin Dashboard: Developed a comprehensive administrative dashboard using Node.js and Express.js.',
+                        'API Integration: Connected frontend interfaces with RESTful APIs for reliable, synchronized data flow.'
+                    ]
+                },
+                'clinic-erp': {
+                    title: 'Multi-Branch Clinic Management ERP',
+                    category: 'Healthcare ERP',
+                    image: '<?= base_url('assets/images/clinic-erp-mockup.jpg') ?>',
+                    description: 'Enterprise-scale medical ERP solution with multi-branch management, clinical workflows, patient records, inventory, and role-based access.',
+                    liveUrl: null,
+                    techStack: ['MERN Stack', 'MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS', 'Chart.js'],
+                    highlights: [
+                        'Architecture: Designed a robust multi-branch structure with complete data isolation and centralized medicine records.',
+                        'Inventory Management: Built batch-level medicine tracking, expiry date monitoring, and automated FIFO stock deduction.',
+                        'Role-Based Dashboards: Built specialized dashboards for Admin, Doctor, Receptionist, and Pharmacist roles with Chart.js analytics.'
+                    ]
+                }
+            };
+
+            // Modal Elements
+            const modal = document.getElementById('project-modal');
+            const backdrop = document.getElementById('project-modal-backdrop');
+            const card = document.getElementById('project-modal-card');
+            const closeBtn = document.getElementById('close-project-modal');
+            const closeBtnBottom = document.getElementById('close-project-modal-bottom');
+
+            const modalTitle = document.getElementById('modal-title');
+            const modalCategory = document.getElementById('modal-category');
+            const modalImage = document.getElementById('modal-image');
+            const modalDescription = document.getElementById('modal-description');
+            const modalHighlights = document.getElementById('modal-highlights');
+            const modalTechStack = document.getElementById('modal-tech-stack');
+            const modalLiveLink = document.getElementById('modal-live-link');
+            const modalLiveLinkContainer = document.getElementById('modal-live-link-container');
+
+            function openProjectModal(projectId) {
+                const data = projectsData[projectId];
+                if (!data) return;
+
+                modalTitle.textContent = data.title;
+                modalCategory.textContent = data.category;
+                modalImage.src = data.image;
+                modalImage.alt = data.title;
+                modalDescription.textContent = data.description;
+
+                // Highlights
+                modalHighlights.innerHTML = '';
+                data.highlights.forEach(highlight => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-start gap-2';
+                    li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-brand-950 mt-2 flex-shrink-0"></span><span>${highlight}</span>`;
+                    modalHighlights.appendChild(li);
+                });
+
+                // Tech Stack
+                modalTechStack.innerHTML = '';
+                data.techStack.forEach(tech => {
+                    const span = document.createElement('span');
+                    span.className = 'px-2.5 py-1 rounded-md bg-slate-100 text-[11px] font-medium text-slate-700 border border-slate-200/60';
+                    span.textContent = tech;
+                    modalTechStack.appendChild(span);
+                });
+
+                // Live link
+                if (data.liveUrl) {
+                    modalLiveLink.href = data.liveUrl;
+                    modalLiveLinkContainer.classList.remove('hidden');
+                } else {
+                    modalLiveLinkContainer.classList.add('hidden');
+                }
+
+                // Show modal with animation
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0');
+                    card.classList.remove('opacity-0', 'scale-95');
+                    card.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            }
+
+            function closeProjectModal() {
+                backdrop.classList.add('opacity-0');
+                card.classList.remove('opacity-100', 'scale-100');
+                card.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 250);
+            }
+
+            // Trigger Buttons
+            document.querySelectorAll('[data-open-project]').forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectId = trigger.getAttribute('data-open-project');
+                    openProjectModal(projectId);
+                });
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+            if (closeBtnBottom) closeBtnBottom.addEventListener('click', closeProjectModal);
+            if (backdrop) backdrop.addEventListener('click', closeProjectModal);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeProjectModal();
+                }
+            });
         });
     </script>
 </body>
