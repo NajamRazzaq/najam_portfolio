@@ -64,7 +64,10 @@
     <!-- Project Details Modal -->
     <?= view('components/project_modal') ?>
 
-    <!-- Interactive Handlers (Mobile Menu & Project Modal) -->
+    <!-- About Me Profile Modal -->
+    <?= view('components/about_modal') ?>
+
+    <!-- Interactive Handlers (Mobile Menu, Project Modal & About Modal) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Mobile Menu
@@ -218,12 +221,154 @@
             if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
             if (closeBtnBottom) closeBtnBottom.addEventListener('click', closeProjectModal);
             if (backdrop) backdrop.addEventListener('click', closeProjectModal);
+            // ==========================================
+            // ABOUT ME MODAL INTERACTION
+            // ==========================================
+            const openAboutBtn = document.getElementById('open-about-modal');
+            const aboutModal = document.getElementById('about-modal');
+            const aboutBackdrop = document.getElementById('about-modal-backdrop');
+            const aboutCard = document.getElementById('about-modal-card');
+            const closeAboutBtn = document.getElementById('close-about-modal');
+            const closeAboutBtnBottom = document.getElementById('close-about-modal-bottom');
+            const aboutContactBtn = document.getElementById('about-modal-contact-btn');
 
+            function openAboutModal() {
+                if (!aboutModal) return;
+                aboutModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    aboutBackdrop.classList.remove('opacity-0');
+                    aboutCard.classList.remove('opacity-0', 'scale-95');
+                    aboutCard.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            }
+
+            function closeAboutModal() {
+                if (!aboutModal) return;
+                aboutBackdrop.classList.add('opacity-0');
+                aboutCard.classList.remove('opacity-100', 'scale-100');
+                aboutCard.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    aboutModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 250);
+            }
+
+            if (openAboutBtn) openAboutBtn.addEventListener('click', openAboutModal);
+            if (closeAboutBtn) closeAboutBtn.addEventListener('click', closeAboutModal);
+            if (closeAboutBtnBottom) closeAboutBtnBottom.addEventListener('click', closeAboutModal);
+            if (aboutBackdrop) aboutBackdrop.addEventListener('click', closeAboutModal);
+
+            if (aboutContactBtn) {
+                aboutContactBtn.addEventListener('click', () => {
+                    closeAboutModal();
+                });
+            }
+
+            // Global Escape Key Listener for Modals
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                    closeProjectModal();
+                if (e.key === 'Escape') {
+                    if (modal && !modal.classList.contains('hidden')) {
+                        closeProjectModal();
+                    }
+                    if (aboutModal && !aboutModal.classList.contains('hidden')) {
+                        closeAboutModal();
+                    }
                 }
             });
+
+            // ==========================================
+            // CONTACT FORM INTERACTION & SUBMISSION
+            // ==========================================
+            const contactForm = document.getElementById('portfolio-contact-form');
+            const servicePills = document.querySelectorAll('.service-pill');
+            const serviceInput = document.getElementById('contact-service');
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const btnSpinner = document.getElementById('btn-spinner');
+            const successMsg = document.getElementById('contact-success-msg');
+            const errorMsg = document.getElementById('contact-error-msg');
+
+            // Service Pill Toggles
+            servicePills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    servicePills.forEach(p => {
+                        p.classList.remove('bg-brand-950', 'text-white', 'border-brand-950', 'shadow-xs', 'active');
+                        p.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+                    });
+                    pill.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+                    pill.classList.add('bg-brand-950', 'text-white', 'border-brand-950', 'shadow-xs', 'active');
+                    if (serviceInput) {
+                        serviceInput.value = pill.getAttribute('data-service');
+                    }
+                });
+            });
+
+            // Contact Form Submit Handler
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('contact-name').value.trim();
+                    const email = document.getElementById('contact-email').value.trim();
+                    const service = serviceInput ? serviceInput.value : 'General Inquiry';
+                    const message = document.getElementById('contact-message').value.trim();
+
+                    if (!name || !email || !message) return;
+
+                    // Set loading state
+                    submitBtn.disabled = true;
+                    btnText.textContent = 'Sending...';
+                    if (btnIcon) btnIcon.classList.add('hidden');
+                    if (btnSpinner) btnSpinner.classList.remove('hidden');
+                    if (successMsg) successMsg.classList.add('hidden');
+                    if (errorMsg) errorMsg.classList.add('hidden');
+
+                    try {
+                        const endpoint = window.location.origin + '/contact/send';
+                        const response = await fetch(endpoint, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            body: JSON.stringify({
+                                name: name,
+                                email: email,
+                                service: service,
+                                message: message
+                            })
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok && result.success) {
+                            contactForm.reset();
+                            if (successMsg) {
+                                successMsg.classList.remove('hidden');
+                                successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            }
+                        } else {
+                            if (errorMsg) {
+                                errorMsg.textContent = result.message || 'Unable to send message right now. Please email directly at najamrazzaq7861@gmail.com.';
+                                errorMsg.classList.remove('hidden');
+                            }
+                        }
+                    } catch (err) {
+                        if (errorMsg) {
+                            errorMsg.textContent = 'Network error. Please try again or reach out directly at najamrazzaq7861@gmail.com.';
+                            errorMsg.classList.remove('hidden');
+                        }
+                    } finally {
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Send Message';
+                        if (btnIcon) btnIcon.classList.remove('hidden');
+                        if (btnSpinner) btnSpinner.classList.add('hidden');
+                    }
+                });
+            }
         });
     </script>
 </body>

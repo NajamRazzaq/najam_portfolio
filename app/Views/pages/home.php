@@ -510,12 +510,12 @@
                     I'm Najam Razzaq, a Web Developer & Designer focused on creating modern, scalable and user-focused digital experiences. My experience spans frontend development, backend systems, APIs, databases and enterprise applications across healthcare, fintech, B2B and corporate platforms.
                 </p>
                 <div class="pt-2">
-                    <a href="#about" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-950 text-white text-xs font-semibold hover:bg-brand-800 transition-all shadow-sm">
+                    <button type="button" id="open-about-modal" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-950 text-white text-xs font-semibold hover:bg-brand-800 transition-all shadow-sm cursor-pointer active:scale-95">
                         <span>More about Me</span>
                         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -866,77 +866,219 @@
     </div>
 </section>
 
-<!-- CONTACT CTA SECTION -->
-<section id="contact" class="py-16">
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-20 bg-slate-50/50 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-3xl border border-slate-200/80 p-8 sm:p-12 lg:p-14 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                <!-- Left Copy -->
-                <div class="lg:col-span-6 space-y-3">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 tracking-tight">
-                        Have something worth building?
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Available for Freelance &amp; Full-time Roles</span>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-950 tracking-tight leading-tight">
+                        Let's build something <span class="bg-gradient-to-r from-brand-950 via-slate-700 to-brand-900 bg-clip-text text-transparent">exceptional.</span>
                     </h2>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-lg">
-                       Have a website, web application, business platform, or product idea in mind? Let's discuss what you're trying to build.
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Have a web application, business platform, custom dashboard, or technical idea in mind? Send me a message and let's talk about how we can make it a reality.
                     </p>
                 </div>
 
-                <!-- Right Contact & CTA Box -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div>
-                        <a href="mailto:najamrazzaq7861@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-950 text-white text-xs sm:text-sm font-semibold hover:bg-brand-800 transition-all shadow-sm active:scale-95">
-                            <span>Start a Conversation</span>
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </a>
+                <!-- Response Speed Card -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200/80 flex items-center gap-3 shadow-xs">
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 font-bold">
+                        ⚡
                     </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-950">Fast Response Guaranteed</div>
+                        <div class="text-[11px] text-slate-500">Usually replies in less than 2 hours during business hours</div>
+                    </div>
+                </div>
 
-                    <!-- Contact Details 2x2 Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100 text-xs font-medium text-slate-700">
-                        
-                        <a href="mailto:najamrazzaq7861@gmail.com" class="flex items-center gap-2.5 hover:text-black transition-colors group">
-                            <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-200 transition-colors">
-                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <!-- Direct Contact Cards -->
+                <div class="space-y-3 pt-2">
+                    <a href="mailto:najamrazzaq7861@gmail.com" class="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-brand-950/40 hover:shadow-sm transition-all group">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:bg-brand-950 group-hover:text-white transition-colors flex-shrink-0">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                                 </svg>
                             </div>
-                            <span class="truncate">najamrazzaq7861@gmail.com</span>
-                        </a>
+                            <div class="min-w-0">
+                                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Email Address</div>
+                                <div class="text-xs sm:text-sm font-semibold text-slate-900 truncate">najamrazzaq7861@gmail.com</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-400 group-hover:text-brand-950 transition-colors">↗</span>
+                    </a>
 
-                        <a href="tel:+923278737313" class="flex items-center gap-2.5 hover:text-black transition-colors group">
-                            <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-200 transition-colors">
-                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <a href="tel:+923278737313" class="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-brand-950/40 hover:shadow-sm transition-all group">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:bg-brand-950 group-hover:text-white transition-colors flex-shrink-0">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
                             </div>
-                            <span>+92 327 8737313</span>
-                        </a>
+                            <div class="min-w-0">
+                                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Phone / WhatsApp</div>
+                                <div class="text-xs sm:text-sm font-semibold text-slate-900 truncate">+92 327 8737313</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-400 group-hover:text-brand-950 transition-colors">↗</span>
+                    </a>
 
-                        <a href="https://www.linkedin.com/in/najam-razzaq-1bb453339/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-[#0A66C2] transition-colors group">
-                            <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-blue-50 group-hover:text-[#0A66C2] transition-colors">
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://www.linkedin.com/in/najam-razzaq-1bb453339/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 hover:border-[#0A66C2]/50 hover:bg-blue-50/30 transition-all group">
+                            <div class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:bg-[#0A66C2] group-hover:text-white transition-colors flex-shrink-0">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.5a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/>
                                 </svg>
                             </div>
-                            <span class="truncate">linkedin.com/in/najam-razzaq</span>
+                            <span class="text-xs font-semibold text-slate-800">LinkedIn</span>
                         </a>
 
-                        <a href="https://github.com/NajamRazzaq" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-black transition-colors group">
-                            <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-200 transition-colors">
+                        <a href="https://github.com/NajamRazzaq" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 hover:border-brand-950/50 hover:bg-slate-50 transition-all group">
+                            <div class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:bg-brand-950 group-hover:text-white transition-colors flex-shrink-0">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                                 </svg>
                             </div>
-                            <span class="truncate">github.com/NajamRazzaq</span>
+                            <span class="text-xs font-semibold text-slate-800">GitHub</span>
                         </a>
-
                     </div>
                 </div>
-
             </div>
+
+            <!-- Right Form Column -->
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-brand-950">Send a Message</h3>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1">Fill out the quick form below and I'll get back to you promptly.</p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="portfolio-contact-form" class="space-y-5">
+                        
+                        <!-- Name & Email Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                                    Your Name <span class="text-rose-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="contact-name" 
+                                    name="name" 
+                                    required 
+                                    placeholder="e.g. Alex Johnson"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50/70 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-950/20 focus:border-brand-950 focus:bg-white transition-all"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="contact-email" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                                    Your Email <span class="text-rose-500">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="contact-email" 
+                                    name="email" 
+                                    required 
+                                    placeholder="alex@example.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50/70 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-950/20 focus:border-brand-950 focus:bg-white transition-all"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Project Type / Service Category Pills -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-2">
+                                What type of project are you looking for?
+                            </label>
+                            
+                            <!-- Hidden input storing selected value -->
+                            <input type="hidden" id="contact-service" name="service" value="Full-Stack Web App">
+
+                            <div class="flex flex-wrap gap-2" id="service-pill-group">
+                                <button type="button" data-service="Full-Stack Web App" class="service-pill active px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-brand-950 text-white border-brand-950 shadow-xs">
+                                    💻 Full-Stack Web App
+                                </button>
+                                <button type="button" data-service="Frontend / UI Design" class="service-pill px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100">
+                                    🎨 Frontend / UI Design
+                                </button>
+                                <button type="button" data-service="Custom ERP / Dashboard" class="service-pill px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100">
+                                    📊 Custom ERP / Dashboard
+                                </button>
+                                <button type="button" data-service="API & Database" class="service-pill px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100">
+                                    ⚡ API &amp; Database
+                                </button>
+                                <button type="button" data-service="Other Inquiry" class="service-pill px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100">
+                                    💬 General Inquiry
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="contact-message" class="block text-xs font-semibold text-slate-700 mb-1.5">
+                                Your Message <span class="text-rose-500">*</span>
+                            </label>
+                            <textarea 
+                                id="contact-message" 
+                                name="message" 
+                                rows="4" 
+                                required 
+                                placeholder="Tell me a bit about your project goals, required tech stack, timeline, or any questions..."
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50/70 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-950/20 focus:border-brand-950 focus:bg-white transition-all resize-y"
+                            ></textarea>
+                        </div>
+
+                        <!-- Form Feedback Alerts -->
+                        <div id="contact-success-msg" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm font-medium flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0">
+                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div>
+                                <span class="font-bold">Message sent successfully!</span> Thank you for reaching out. I'll get back to you shortly.
+                            </div>
+                        </div>
+
+                        <div id="contact-error-msg" class="hidden p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 text-xs font-medium">
+                            Something went wrong. You can also reach me directly at <a href="mailto:najamrazzaq7861@gmail.com" class="underline font-bold">najamrazzaq7861@gmail.com</a>.
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            id="contact-submit-btn"
+                            class="w-full py-3.5 px-6 rounded-xl bg-brand-950 text-white text-sm font-semibold hover:bg-brand-900 active:scale-[0.99] transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                            <span id="btn-text">Send Message</span>
+                            <svg id="btn-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                            <!-- Spinner (hidden by default) -->
+                            <svg id="btn-spinner" class="hidden animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
         </div>
+
     </div>
 </section>
 
